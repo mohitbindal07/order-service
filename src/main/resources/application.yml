@@ -1,0 +1,42 @@
+spring:
+  jackson:
+    time-zone: Asia/Kolkata
+  jpa:
+    show_sql: true
+    generate-ddl: true
+    hibernate:
+      show_sql: true
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 3MB
+      max-request-size: 3MB
+  aop:
+    auto: true
+
+  datasource:
+    # H2 database
+    #    url: jdbc:h2:mem:ecomDB
+    #    username:
+    #    password:
+    #    driver-class-name: org.h2.Driver
+
+    # Mysql RDS database
+    #url:  jdbc:mysql://{mysqlhost:port}/ecomrds
+    #username:
+    #password:
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+    
+    # H2 database with encryption
+    #url: jdbc:h2:mem:ecomDB
+    #username: ENC(CqGIVqbsZ/soDnE/GPel8Q==)
+    #password: ENC(CqGIVqbsZ/soDnE/GPel8Q==)
+    #driver-class-name: org.h2.Driver
+  #h2.console.path: /h2-console
+  #h2.console.enabled: true
+
+
+server:
+  port: 8081
